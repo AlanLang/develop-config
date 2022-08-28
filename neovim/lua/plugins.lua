@@ -22,6 +22,10 @@ packer.startup(
     use("ahmedkhalf/project.nvim")
     -- treesitter 
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    --------------------- LSP --------------------
+    use("williamboman/nvim-lsp-installer")
+    -- Lspconfig
+    use({ "neovim/nvim-lspconfig" })
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
