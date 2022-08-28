@@ -27,6 +27,13 @@ map("n", "<leader>tl", ":BufferLineCycleNext<CR>", opt)
 map("n", "<leader>tc", ":BufferLinePickClose<CR>", opt)
 map("n", "<leader>tl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>th", ":BufferLineCloseLeft<CR>", opt)
+
+-- Telescope
+-- 查找文件
+map("n", "<leader>p", ":Telescope find_files<CR>", opt)
+-- 全局搜索
+map("n", "<leader>f", ":Telescope live_grep<CR>", opt)
+
 -- 插件快捷键
 local pluginKeys = {}
 
