@@ -7,6 +7,8 @@ packer.startup(
    use 'mhartington/oceanic-next'
    -- transparent
    use 'xiyaowong/nvim-transparent'
+   -- 文件目录栏
+   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
