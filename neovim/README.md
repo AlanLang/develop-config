@@ -13,10 +13,6 @@ https://github.com/mhartington/oceanic-next
 ## 设置透明
 https://github.com/xiyaowong/nvim-transparent
 
-## 插件
-
-| 插件                     | 描述         | 地址                                        |
-| ------------------------ | ------------ | ------------------------------------------- |
-| wbthomason/packer.nvim   | 插件管理器   | https://github.com/wbthomason/packer.nvim   |
-| mhartington/oceanic-next | oceanic 主题 | https://github.com/mhartington/oceanic-next |
-| nvim-transparent         | 设置透明      | https://github.com/xiyaowong/nvim-transparent |
+## 文件搜索
+* BurntSushi/ripgrep：https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FBurntSushi%2Fripgrep
+* sharkdp/fd：https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fsharkdp%2Ffd
