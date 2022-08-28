@@ -9,6 +9,11 @@ packer.startup(
    use 'xiyaowong/nvim-transparent'
    -- 文件目录栏
    use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+   -- bufferline tab标题
+   use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+   -- lualine
+    use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+    use("arkav/lualine-lsp-progress")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
