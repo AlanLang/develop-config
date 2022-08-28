@@ -14,5 +14,5 @@ https://github.com/mhartington/oceanic-next
 https://github.com/xiyaowong/nvim-transparent
 
 ## 文件搜索
-* BurntSushi/ripgrep：https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FBurntSushi%2Fripgrep
-* sharkdp/fd：https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fsharkdp%2Ffd
+* BurntSushi/ripgrep：https://github.com/BurntSushi/ripgrep
+* sharkdp/fd：https://github.com/sharkdp/fd
