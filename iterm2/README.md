@@ -12,5 +12,22 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ### 自动提示
 https://github.com/zsh-users/zsh-autosuggestions
+
 ### 主题
 https://github.com/romkatv/powerlevel10k 
+
+#### 配色调整
+
+`vi ~/.p10k.zsh`
+
+修改文档中已有的值即可
+
+```
+# 时间的前景色
+typeset -g POWERLEVEL9K_TIME_FOREGROUND=7
+# 时间的背景色
+typeset -g POWERLEVEL9K_TIME_BACKGROUND=8
+
+# 系统图标的背景色
+typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=10
+```
