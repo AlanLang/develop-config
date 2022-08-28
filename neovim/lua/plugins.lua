@@ -5,6 +5,8 @@ packer.startup(
    use 'wbthomason/packer.nvim'
    -- oceanic-next
    use 'mhartington/oceanic-next'
+   -- transparent
+   use 'xiyaowong/nvim-transparent'
 end)
 
 -- 每次保存 plugins.lua 自动安装插件

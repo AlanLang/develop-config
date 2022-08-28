@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/Users/alan/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
+  },
   ["oceanic-next"] = {
     loaded = true,
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/oceanic-next",
