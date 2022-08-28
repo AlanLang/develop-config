@@ -24,9 +24,7 @@ map("n", "<leader>l", "<C-w>l", opt)
 -- 左右Tab切换
 map("n", "<leader>th", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<leader>tl", ":BufferLineCycleNext<CR>", opt)
-map("n", "<leader>tc", ":BufferLinePickClose<CR>", opt)
-map("n", "<leader>tl", ":BufferLineCloseRight<CR>", opt)
-map("n", "<leader>th", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 
 -- Telescope
 -- 查找文件
