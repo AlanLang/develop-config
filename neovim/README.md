@@ -1,4 +1,7 @@
+![](./snapshoot/neovim.jpeg)
+
 ## 字体
+
 https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/Monaco%20Nerd%20Font%20Complete%20Windows%20Compatible.otf
 
 ## 安装 Packer.nvim 插件管理器
