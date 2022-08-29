@@ -8,12 +8,12 @@ vim.g.maplocalleader = " "
 -- 取消 s 默认功能
 map("n", "s", "", opt)
 -- windows 分屏快捷键
-map("n", "sv", ":vsp<CR>", opt)
-map("n", "sh", ":sp<CR>", opt)
+map("n", "<A-l>", ":vsp<CR>", opt)
+map("n", "<A-j>", ":sp<CR>", opt)
 -- 关闭当前
-map("n", "sc", "<C-w>c", opt)
+map("n", "<A-c>", "<C-w>c", opt)
 -- 关闭其他
-map("n", "so", "<C-w>o", opt)
+map("n", "<A-o>", "<C-w>o", opt)
 -- Alt + hjkl  窗口之间跳转
 map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>j", "<C-w>j", opt)
@@ -28,16 +28,16 @@ map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 
 -- Telescope
 -- 查找文件
-map("n", "<leader>p", ":Telescope find_files<CR>", opt)
+map("n", "<A-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
-map("n", "<leader>f", ":Telescope live_grep<CR>", opt)
+map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
 
 -- nvim-tree
 -- Alt + e 键打开关闭tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", opt)
+map("n", "<A-e>", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = {
   -- 打开文件或文件夹
@@ -84,5 +84,11 @@ pluginKeys.mapLSP = function(mapbuf)
   -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
   -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
+
+-- telescope 快捷键设置
+pluginKeys.mapTelescope = {
+  -- 使用分屏打开文件
+  ["<A-l>"] = "select_vertical",
+}
 
 return pluginKeys

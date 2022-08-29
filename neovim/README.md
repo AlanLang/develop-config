@@ -17,5 +17,7 @@ https://github.com/mhartington/oceanic-next
 https://github.com/xiyaowong/nvim-transparent
 
 ## 文件搜索
+
+`:checkhealth telescope` 检查依赖
 * BurntSushi/ripgrep：https://github.com/BurntSushi/ripgrep
 * sharkdp/fd：https://github.com/sharkdp/fd
