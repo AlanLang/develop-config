@@ -5,8 +5,6 @@ local opt = {noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- 取消 s 默认功能
-map("n", "s", "", opt)
 -- windows 分屏快捷键
 map("n", "<A-l>", ":vsp<CR>", opt)
 map("n", "<A-j>", ":sp<CR>", opt)
