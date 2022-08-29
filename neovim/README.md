@@ -1,5 +1,12 @@
 ![](./snapshoot/neovim.jpeg)
 
+## 使用
+直接将本目录软链接到 `~/.config/nvim`
+
+```
+ln -s ~/xxx/develop-config/neovim ~/.config/nvim
+```
+
 ## 字体
 
 https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/Monaco%20Nerd%20Font%20Complete%20Windows%20Compatible.otf
