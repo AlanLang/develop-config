@@ -74,7 +74,7 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. 'c'
 -- 补全最多显示10行
 vim.o.pumheight = 10
--- 永远显示 tabline
-vim.o.showtabline = 2
+-- 不显示 tabline
+vim.o.showtabline = 0
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
