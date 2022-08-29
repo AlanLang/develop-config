@@ -5,6 +5,9 @@ local opt = {noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- 列块可视模式快捷键
+map("n", "<A-v>", "<C-v>", opt)
+
 -- windows 分屏快捷键
 map("n", "<A-l>", ":vsp<CR>", opt)
 map("n", "<A-j>", ":sp<CR>", opt)
