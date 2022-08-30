@@ -33,6 +33,7 @@ map("n", "<A-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
 
+map("n", "<leader>c", ":nohl<CR>", opt)
 -- 插件快捷键
 local pluginKeys = {}
 
