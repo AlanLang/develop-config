@@ -13,3 +13,6 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.telescope")
 -- 内置LSP 
 require("lsp.setup")
+require("lsp.cmp")
+require("lsp.ui")
+require("plugin-config.indent-blankline")
