@@ -43,6 +43,9 @@ packer.startup(
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
     use("tami5/lspsaga.nvim" )
+    -- 代码格式化
+    -- use("mhartington/formatter.nvim")
+    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
