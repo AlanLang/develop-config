@@ -5,6 +5,10 @@ local opt = {noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- save buffer
+map('n', '<C-s>', ':w<cr>', opt)
+map('i', '<C-s>', '<Esc>:w<cr>', opt)
+
 -- windows 分屏快捷键
 map("n", "<C-l>", ":vsp<CR>", opt)
 map("n", "<C-j>", ":sp<CR>", opt)
