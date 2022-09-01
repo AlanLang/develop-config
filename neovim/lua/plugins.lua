@@ -49,6 +49,8 @@ packer.startup(
     -- JSON 增强
     use("b0o/schemastore.nvim")
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
+    -- 括号自动补全
+    use ({"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end })
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
