@@ -5,7 +5,7 @@ local opt = {noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- save buffer
+-- 保存命令的快捷键
 map('n', '<C-s>', ':w<cr>', opt)
 map('i', '<C-s>', '<Esc>:w<cr>', opt)
 
@@ -34,6 +34,7 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
+-- 清理提示
 map("n", "<leader>c", ":nohl<CR>", opt)
 -- 插件快捷键
 local pluginKeys = {}
@@ -64,40 +65,15 @@ pluginKeys.nvimTreeList = {
 
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
-  -- rename
-  --[[
-  Lspsaga 替换 rn
-  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
-  --]]
+  -- 重命名
   mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
-  -- code action
-  --[[
-  Lspsaga 替换 ca
-  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
-  --]]
+  -- 列出可以执行的操作
   mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
-  -- go xx
-  --[[
-    mapbuf('n', 'gd', '<cmd>Lspsaga preview_definition<CR>', opt)
-  --]]
+  -- 跳转到定义的地方
   mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
-  --[[
-  Lspsaga 替换 gh
-  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
-  --]]
+  -- 显示信息
   mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
-  --[[
-  Lspsaga 替换 gr
-  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
-  --]]
   mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
-  --[[
-  Lspsaga 替换 gp, gj, gk
-  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
-  mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
-  mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
-  --]]
-  -- diagnostic
   mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
@@ -122,7 +98,7 @@ pluginKeys.mapTelescope = {
 -- typescript 快捷键
 pluginKeys.mapTsLSP = function(mapbuf)
   mapbuf("n", "gs", ":TSLspOrganize<CR>", opt)
-  mapbuf("n", "gr", ":TSLspRenameFile<CR>", opt)
+  -- mapbuf("n", "gr", ":TSLspRenameFile<CR>", opt)
   mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
 end
 

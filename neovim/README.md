@@ -11,6 +11,12 @@ ln -s ~/xxx/develop-config/neovim ~/.config/nvim
 
 https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/Monaco%20Nerd%20Font%20Complete%20Windows%20Compatible.otf
 
+## 拼写检查
+
+```
+npm install -g cspell
+```
+
 ## 安装 Packer.nvim 插件管理器
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\

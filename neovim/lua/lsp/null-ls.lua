@@ -39,6 +39,14 @@ null_ls.setup({
     diagnostics.eslint.with({
       prefer_local = "node_modules/.bin",
     }),
+    diagnostics.cspell.with({
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+      },
+    }),
     -- code actions ---------------------
     -- code_actions.gitsigns,
     code_actions.eslint.with({

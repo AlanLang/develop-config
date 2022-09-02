@@ -78,3 +78,7 @@ vim.o.pumheight = 10
 vim.o.showtabline = 0
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
+-- 禁用内置的拼写检查
+vim.o.spell = false
+vim.o.spelloptions = "camel"
+vim.o.spellcapcheck = "" 

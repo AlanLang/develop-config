@@ -50,7 +50,9 @@ packer.startup(
     use("b0o/schemastore.nvim")
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     -- 括号自动补全
-    use ({"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end })
+    use ("windwp/nvim-autopairs")
+    -- 平滑滚动
+    use("karb94/neoscroll.nvim")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
