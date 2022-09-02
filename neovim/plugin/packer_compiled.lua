@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["command_center.nvim"] = {
+    loaded = true,
+    path = "/Users/alan/.local/share/nvim/site/pack/packer/start/command_center.nvim",
+    url = "https://github.com/FeiyouG/command_center.nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/dashboard-nvim",

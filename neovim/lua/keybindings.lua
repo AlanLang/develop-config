@@ -39,6 +39,7 @@ map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 -- Telescope
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
@@ -48,7 +49,6 @@ map("n", "<leader>c", ":nohl<CR>", opt)
 local pluginKeys = {}
 
 -- nvim-tree
--- Alt + e 键打开关闭tree
 map("n", "<C-e>", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = {

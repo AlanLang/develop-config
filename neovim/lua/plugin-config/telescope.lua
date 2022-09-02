@@ -9,7 +9,7 @@ end
 local list_keys = require('keybindings').mapTelescope
 
 -- https://github.com/nvim-telescope/telescope.nvim#getting-started
-require('telescope').setup{
+lualine.setup{
     defaults = {
       -- Default configuration for telescope goes here:
       -- config_key = value,
@@ -34,3 +34,6 @@ require('telescope').setup{
       -- please take a look at the readme of the extension you want to configure
     }
   }
+
+
+lualine.load_extension("command_center")

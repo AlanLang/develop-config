@@ -57,6 +57,11 @@ packer.startup(
     use("folke/trouble.nvim")
     -- 命令行
     use("akinsho/toggleterm.nvim")
+    -- 快捷命令
+    use {
+      "FeiyouG/command_center.nvim",
+      requires = { "nvim-telescope/telescope.nvim" }
+    }
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
