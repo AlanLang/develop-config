@@ -14,6 +14,7 @@ map("n", "<C-l>", ":vsp<CR>", opt)
 map("n", "<C-j>", ":sp<CR>", opt)
 -- 关闭当前
 map("n", "<C-c>", "<C-w>c", opt)
+
 -- 关闭其他
 map("n", "<C-x>", "<C-w>o", opt)
 -- Alt + hjkl  窗口之间跳转
@@ -21,6 +22,13 @@ map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>j", "<C-w>j", opt)
 map("n", "<leader>k", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
+
+-- 打开问题栏
+map("n", "<C-t>", ":Trouble<CR>", opt)
+-- 打开控制台
+map("n", "<C-z>", ":ToggleTerm<CR>", opt)
+-- 关闭控制台
+map("t", "<esc>", [[<C-\><C-n><C-w>c]], opt)
 
 -- bufferline
 -- 左右Tab切换

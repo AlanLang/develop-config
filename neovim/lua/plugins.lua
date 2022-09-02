@@ -53,6 +53,10 @@ packer.startup(
     use ("windwp/nvim-autopairs")
     -- 平滑滚动
     use("karb94/neoscroll.nvim")
+    -- 错误列表
+    use("folke/trouble.nvim")
+    -- 命令行
+    use("akinsho/toggleterm.nvim")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件

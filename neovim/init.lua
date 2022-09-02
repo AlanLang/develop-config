@@ -13,6 +13,8 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.telescope")
 require("plugin-config.autopairs")
 require("plugin-config.neoscroll")
+require("plugin-config.trouble")
+require("plugin-config.toggleterm")
 -- 内置LSP 
 require("lsp.setup")
 require("lsp.cmp")
