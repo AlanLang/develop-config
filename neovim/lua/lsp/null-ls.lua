@@ -4,6 +4,9 @@ if not status then
   return
 end
 
+local h = require("null-ls.helpers")
+local runtime_path = vim.split(package.path, ';')
+
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
@@ -13,9 +16,9 @@ null_ls.setup({
   sources = {
     -- Formatting ---------------------
     --  brew install shfmt
-    formatting.shfmt,
+    -- formatting.shfmt,
     -- StyLua
-    formatting.stylua,
+    -- formatting.stylua,
     -- frontend
     formatting.prettier.with({ -- 比默认少了 markdown
       filetypes = {
@@ -45,6 +48,38 @@ null_ls.setup({
         "javascriptreact",
         "typescript",
         "typescriptreact",
+      },
+      generator_opts = {
+        command = "cspell",
+        args = function(params)
+            print(vim.inspect(runtime_path))
+            return {
+                "--language-id",
+                params.ft,
+                "--config",
+                "/Users/alan/.config/develop-config/neovim/cspell.json",
+                "stdin",
+            }
+        end,
+        to_stdin = true,
+        ignore_stderr = true,
+        format = "line",
+        check_exit_code = function(code)
+            return code <= 1
+        end,
+        on_output = h.diagnostics.from_pattern(
+            [[.*:(%d+):(%d+)%s*-%s*(.*%((.*)%))]],
+            { "row", "col", "message", "_quote" },
+            {
+                adapters = { h.diagnostics.adapters.end_col.from_quote },
+                severities = {
+                  ["error"] = 4,
+                  ["warning"] = 4,
+                  ["information"] = 3,
+                  ["hint"] = 4,
+                }
+            }
+        ),
       },
     }),
     -- code actions ---------------------
