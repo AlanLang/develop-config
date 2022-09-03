@@ -73,5 +73,10 @@ command_center.add({
       desc = "multi select word",
       cmd = "<C-n>",
       keys = { "n", "<C-n>", noremap },
+    },
+    {
+      desc = "quick select model",
+      cmd = ":lua require('tsht').nodes()<CR>",
+      keys = { "n", "<C-a>", noremap },
     }
 })

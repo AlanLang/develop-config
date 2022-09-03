@@ -46,6 +46,9 @@ map("n", "<C-m>", ":IlluminateNextReference<CR>", opt)
 -- 定位到上一个相同的单词
 map("n", "<C-S-m>", ":IlluminatePrevReference<CR>", opt)
 
+-- 快捷选中
+map("n", "<C-a>", ":lua require('tsht').nodes()<CR>", opt)
+
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
