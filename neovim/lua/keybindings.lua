@@ -39,7 +39,13 @@ map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 -- Telescope
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- 打开全局命令输入
 map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
+-- 打开当前符号搜索
+map("n", "<C-o>", ":Telescope lsp_document_symbols<CR>", opt)
+-- 全局搜索
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+
 -- 定位到下一个相同的单词
 map("n", "<C-m>", ":IlluminateNextReference<CR>", opt)
 
@@ -49,8 +55,6 @@ map("n", "<C-S-m>", ":IlluminatePrevReference<CR>", opt)
 -- 快捷选中
 map("n", "<C-a>", ":lua require('tsht').nodes()<CR>", opt)
 
--- 全局搜索
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
 -- 清理提示
 map("n", "<leader>c", ":nohl<CR>", opt)
