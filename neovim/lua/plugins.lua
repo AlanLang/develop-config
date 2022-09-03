@@ -70,6 +70,13 @@ packer.startup(
     use("mfussenegger/nvim-treehopper")
     -- 文件打开历史
     use("gaborvecsei/memento.nvim")
+    -- 快速注释
+    use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+    }
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
