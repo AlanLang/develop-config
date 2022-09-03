@@ -16,6 +16,7 @@ require("plugin-config.neoscroll")
 require("plugin-config.trouble")
 require("plugin-config.toggleterm")
 require("plugin-config.command")
+require("plugin-config.illuminate")
 -- 内置LSP 
 require("lsp.setup")
 require("lsp.cmp")

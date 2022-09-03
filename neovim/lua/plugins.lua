@@ -62,6 +62,10 @@ packer.startup(
       "FeiyouG/command_center.nvim",
       requires = { "nvim-telescope/telescope.nvim" }
     }
+    -- 光标多选
+    use("mg979/vim-visual-multi")
+    -- 高亮相同的单词
+    use{"AlanLang/vim-illuminate"}
 end)
 
 -- 每次保存 plugins.lua 自动安装插件

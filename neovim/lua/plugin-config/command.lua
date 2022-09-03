@@ -68,5 +68,10 @@ command_center.add({
       desc = "import all auto",
       cmd = ":TSLspImportAll<CR>",
       keys = { "n", "gi", noremap },
+    },
+    {
+      desc = "multi select word",
+      cmd = "<C-n>",
+      keys = { "n", "<C-n>", noremap },
     }
 })

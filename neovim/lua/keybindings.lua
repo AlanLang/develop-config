@@ -40,6 +40,12 @@ map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
+-- 定位到下一个相同的单词
+map("n", "<C-m>", ":IlluminateNextReference<CR>", opt)
+
+-- 定位到上一个相同的单词
+map("n", "<C-S-m>", ":IlluminatePrevReference<CR>", opt)
+
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
