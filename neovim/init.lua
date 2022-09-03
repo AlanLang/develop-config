@@ -17,6 +17,7 @@ require("plugin-config.trouble")
 require("plugin-config.toggleterm")
 require("plugin-config.command")
 require("plugin-config.illuminate")
+require("plugin-config.comment")
 -- 内置LSP 
 require("lsp.setup")
 require("lsp.cmp")
