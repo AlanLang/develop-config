@@ -78,5 +78,12 @@ command_center.add({
       desc = "quick select model",
       cmd = ":lua require('tsht').nodes()<CR>",
       keys = { "n", "<C-a>", noremap },
+    },{
+      desc = "file open history",
+      cmd = ":lua require('memento').toggle()<CR>",
+      keys = { "n", "<leader>mh", noremap },
+    },{
+      desc = "save file and exit",
+      cmd = ":wq<CR>"
     }
 })

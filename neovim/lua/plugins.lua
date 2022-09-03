@@ -66,7 +66,10 @@ packer.startup(
     use("mg979/vim-visual-multi")
     -- 高亮相同的单词
     use{"AlanLang/vim-illuminate"}
+    -- 快捷块选中
     use("mfussenegger/nvim-treehopper")
+    -- 文件打开历史
+    use("gaborvecsei/memento.nvim")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件

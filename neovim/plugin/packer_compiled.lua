@@ -141,6 +141,11 @@ _G.packer_plugins = {
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["memento.nvim"] = {
+    loaded = true,
+    path = "/Users/alan/.local/share/nvim/site/pack/packer/start/memento.nvim",
+    url = "https://github.com/gaborvecsei/memento.nvim"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
