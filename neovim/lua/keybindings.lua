@@ -43,6 +43,8 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
 -- 打开当前符号搜索
 map("n", "<C-o>", ":Telescope lsp_document_symbols<CR>", opt)
+
+map("n", "<C-S-o>", ":Telescope<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
