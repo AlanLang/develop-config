@@ -4,7 +4,7 @@ packer.startup(
    -- Packer 可以管理自己本身
    use 'wbthomason/packer.nvim'
    -- oceanic-next
-   use 'mhartington/oceanic-next'
+   use 'AlanLang/oceanic-next'
    -- transparent
    use 'xiyaowong/nvim-transparent'
    -- 文件目录栏
