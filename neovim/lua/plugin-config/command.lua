@@ -87,7 +87,10 @@ command_center.add({
       cmd = ":wq<CR>"
     },{
       desc = "list document symbols by lsp",
-      cmd = "::Telescope lsp_document_symbols<cr>",
+      cmd = ":Telescope lsp_document_symbols<cr>",
       keys = { "n", "<C-o>", noremap },
+    },{
+      desc = "open git view",
+      cmd = "<cmd>lua _lazygit_toggle()<CR>",
     }
 })

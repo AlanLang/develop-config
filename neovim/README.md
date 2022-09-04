@@ -17,6 +17,12 @@ https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/Monaco%20Nerd%
 npm install -g cspell
 ```
 
+## lazgit
+
+```
+brew install lazygit
+```
+
 ## 安装 Packer.nvim 插件管理器
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\

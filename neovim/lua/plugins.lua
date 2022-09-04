@@ -72,6 +72,8 @@ packer.startup(
     use("gaborvecsei/memento.nvim")
     -- 快速注释
     use("numToStr/Comment.nvim")
+    -- git 信息
+    use ("f-person/git-blame.nvim")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
