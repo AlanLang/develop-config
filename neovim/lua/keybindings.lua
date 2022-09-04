@@ -28,7 +28,8 @@ map("n", "<C-t>", ":Trouble<CR>", opt)
 -- 打开控制台
 map("n", "<C-z>", ":ToggleTerm<CR>", opt)
 -- 关闭控制台
-map("t", "<esc>", [[<C-\><C-n><C-w>c]], opt)
+-- map("t", "<esc>", [[<C-\><C-n><C-w>c]], opt)
+map("t", "<C-z>", [[<C-\><C-n><C-w>c]], opt)
 
 -- bufferline
 -- 左右Tab切换
