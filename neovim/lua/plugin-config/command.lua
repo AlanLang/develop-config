@@ -92,5 +92,6 @@ command_center.add({
     },{
       desc = "open git view",
       cmd = "<cmd>lua _lazygit_toggle()<CR>",
+      keys = { "n", "<C-g>", noremap },
     }
 })

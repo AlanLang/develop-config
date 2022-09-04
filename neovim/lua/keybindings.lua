@@ -41,6 +41,9 @@ map("n", "<leader>tc", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 打开全局命令输入
 map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
+-- 打开 git 面板
+map("n", "<C-g>", ":<cmd>lua _lazygit_toggle()<CR>", opt)
+
 -- 打开当前符号搜索
 map("n", "<C-o>", ":Telescope lsp_document_symbols<CR>", opt)
 
