@@ -88,10 +88,13 @@ command_center.add({
     },{
       desc = "list document symbols by lsp",
       cmd = ":Telescope lsp_document_symbols<cr>",
-      keys = { "n", "<C-o>", noremap },
+      keys = { "n", "<C-w>", noremap },
     },{
       desc = "open git view",
       cmd = "<cmd>lua _lazygit_toggle()<CR>",
       keys = { "n", "<C-g>", noremap },
+    },{
+      desc = "open snippet config",
+      cmd = ":VsnipOpen<CR>",
     }
 })

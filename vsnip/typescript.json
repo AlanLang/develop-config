@@ -1,0 +1,20 @@
+{
+  "log": {
+    "prefix": ["log"],
+    "body": "console.log('%c${2:log}: ', 'color: MidnightBlue; background: Aquamarine;', $1);",
+    "description": "添加注释"
+  },
+  "func": {
+    "prefix": ["func"],
+    "body": [
+      "/**",
+      " *",
+      " * @param params",
+      " * @return",
+      " */",
+      "function ${1:name}(params: string): void {",
+      "",
+      "}"
+    ]
+  }
+}

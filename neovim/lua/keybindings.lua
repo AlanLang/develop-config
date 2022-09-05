@@ -46,9 +46,9 @@ map("n", "<C-S-p>", ":Telescope command_center<CR>", opt)
 map("n", "<C-g>", ":<cmd>lua _lazygit_toggle()<CR>", opt)
 
 -- 打开当前符号搜索
-map("n", "<C-o>", ":Telescope lsp_document_symbols<CR>", opt)
+map("n", "<C-w>", ":Telescope lsp_document_symbols<CR>", opt)
 
-map("n", "<C-S-o>", ":Telescope<CR>", opt)
+map("n", "<C-S-w>", ":Telescope<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
@@ -116,6 +116,7 @@ pluginKeys.mapLSP = function(mapbuf)
   -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
 
+
 -- telescope 快捷键设置
 pluginKeys.mapTelescope = {
   -- 使用分屏打开文件
@@ -131,27 +132,72 @@ end
 
 -- nvim-cmp 自动补全
 pluginKeys.cmp = function(cmp)
-    return {
-        -- 出现补全
-        ["<C-.>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
-        -- 取消
-        ["<C-,>"] = cmp.mapping({
-            i = cmp.mapping.abort(),
-            c = cmp.mapping.close()
-        }),
-        -- 上一个
-        ["<up>"] = cmp.mapping.select_prev_item(),
-        -- 下一个
-        ["<down>"] = cmp.mapping.select_next_item(),
-        -- 确认
-        ["<CR>"] = cmp.mapping.confirm({
-            select = true,
-            behavior = cmp.ConfirmBehavior.Replace
-        }),
-        -- 如果窗口内容太多，可以滚动
-        ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}),
-        ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}),
-    }
+  local feedkey = function(key, mode)
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+  end
+
+  local has_words_before = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  end
+
+  return {
+    -- 出现补全
+    ["<C-.>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+    -- 取消
+    ["<C-,>"] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close()
+    }),
+    -- 上一个
+    ["<up>"] = cmp.mapping.select_prev_item(),
+    -- 下一个
+    ["<down>"] = cmp.mapping.select_next_item(),
+    -- 确认
+    ["<CR>"] = cmp.mapping.confirm({
+        select = true,
+        behavior = cmp.ConfirmBehavior.Replace
+    }),
+    -- 如果窗口内容太多，可以滚动
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}),
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}),
+
+      -- 自定义代码段跳转到下一个参数
+    ["<C-l>"] = cmp.mapping(function(_)
+      if vim.fn["vsnip#available"](1) == 1 then
+        feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      end
+    end, {"i", "s"}),
+
+    -- 自定义代码段跳转到上一个参数
+    ["<C-h>"] = cmp.mapping(function()
+      if vim.fn["vsnip#jumpable"](-1) == 1 then
+        feedkey("<Plug>(vsnip-jump-prev)", "")
+      end
+    end, {"i", "s"}),
+
+    -- Super Tab
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif vim.fn["vsnip#available"](1) == 1 then
+        feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+      end
+    end, {"i", "s"}),
+
+    ["<S-Tab>"] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+        feedkey("<Plug>(vsnip-jump-prev)", "")
+      end
+    end, {"i", "s"})
+    -- end of super Tab
+  }
   end
 
 return pluginKeys
