@@ -74,6 +74,8 @@ packer.startup(
     use("numToStr/Comment.nvim")
     -- git 信息
     use ("f-person/git-blame.nvim")
+    -- Rust 增强
+    use("simrat39/rust-tools.nvim")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
