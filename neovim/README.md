@@ -11,6 +11,15 @@ ln -s ~/xxx/develop-config/neovim ~/.config/nvim
 
 https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/Monaco%20Nerd%20Font%20Complete%20Windows%20Compatible.otf
 
+## 替代 vi 和 vim
+
+nvim ~/.zshrc
+```
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
+```
+
 ## 拼写检查
 
 ```
