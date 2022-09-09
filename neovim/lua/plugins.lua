@@ -74,6 +74,7 @@ packer.startup(
     use("numToStr/Comment.nvim")
     -- git 信息
     use ("f-person/git-blame.nvim")
+    use ("windwp/nvim-ts-autotag")
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
