@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/command_center.nvim",
     url = "https://github.com/FeiyouG/command_center.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/alan/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/alan/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
