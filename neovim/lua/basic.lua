@@ -82,3 +82,4 @@ vim.o.showmode = false
 vim.o.spell = false
 vim.o.spelloptions = "camel"
 vim.o.spellcapcheck = "" 
+vim.o.clipboard = "unnamedplus"
