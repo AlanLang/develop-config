@@ -1,26 +1,26 @@
 local packer = require("packer")
 packer.startup(
   function(use)
-   -- Packer 可以管理自己本身
-   use 'wbthomason/packer.nvim'
-   -- oceanic-next
-   use 'AlanLang/oceanic-next'
-   -- transparent
-   use 'xiyaowong/nvim-transparent'
-   -- 文件目录栏
-   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-   -- bufferline tab标题
-   use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
-   -- lualine
+    -- Packer 可以管理自己本身
+    use 'wbthomason/packer.nvim'
+    -- oceanic-next
+    use 'AlanLang/oceanic-next'
+    -- transparent
+    use 'xiyaowong/nvim-transparent'
+    -- 文件目录栏
+    use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+    -- bufferline tab标题
+    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
+    -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
-    -- telescope 
+    -- telescope
     use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
-    -- dashboard-nvim 
+    -- dashboard-nvim
     use("glepnir/dashboard-nvim")
     -- project
     use("ahmedkhalf/project.nvim")
-    -- treesitter 
+    -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --------------------- LSP --------------------
     use("williamboman/nvim-lsp-installer")
@@ -30,7 +30,7 @@ packer.startup(
     use("hrsh7th/nvim-cmp")
     -- snippet 引擎
     use("hrsh7th/vim-vsnip")
-        -- 补全源
+    -- 补全源
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
     use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
@@ -42,7 +42,7 @@ packer.startup(
     use("onsails/lspkind-nvim")
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
-    use("tami5/lspsaga.nvim" )
+    use("tami5/lspsaga.nvim")
     -- 代码格式化
     -- use("mhartington/formatter.nvim")
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
@@ -50,7 +50,7 @@ packer.startup(
     use("b0o/schemastore.nvim")
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     -- 括号自动补全
-    use ("windwp/nvim-autopairs")
+    use("windwp/nvim-autopairs")
     -- 平滑滚动
     use("karb94/neoscroll.nvim")
     -- 错误列表
@@ -65,7 +65,7 @@ packer.startup(
     -- 光标多选
     use("mg979/vim-visual-multi")
     -- 高亮相同的单词
-    use{"AlanLang/vim-illuminate"}
+    use { "AlanLang/vim-illuminate" }
     -- 快捷块选中
     use("mfussenegger/nvim-treehopper")
     -- 文件打开历史
@@ -73,12 +73,12 @@ packer.startup(
     -- 快速注释
     use("numToStr/Comment.nvim")
     -- git 信息
-    use ("f-person/git-blame.nvim")
-    use ("windwp/nvim-ts-autotag")
+    use("f-person/git-blame.nvim")
+    use("windwp/nvim-ts-autotag")
     -- Rust 增强
-    use ("simrat39/rust-tools.nvim")
+    use("simrat39/rust-tools.nvim")
     use 'github/copilot.vim'
-end)
+  end)
 
 -- 每次保存 plugins.lua 自动安装插件
 pcall(
