@@ -1,3 +1,8 @@
+" 设定默认解码 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
 "显示行号
 set nu 
 
@@ -13,9 +18,45 @@ if &term =~ "xterm"
     " NORMAL mode
     let &t_EI = "\<Esc>[2 q" . "\<Esc>]12;green\x7"
 endif
-" 1 -> blinking block  闪烁的方块
-" 2 -> solid block  不闪烁的方块
-" 3 -> blinking underscore  闪烁的下划线
-" 4 -> solid underscore  不闪烁的下划线
-" 5 -> blinking vertical bar  闪烁的竖线
-" 6 -> solid vertical bar  不闪烁的竖线
+
+" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位） 
+set mouse=a 
+set selection=exclusive 
+set selectmode=mouse,key 
+
+" 不让vim发出讨厌的滴滴声 
+set noerrorbells 
+
+" 高亮显示匹配的括号 
+set showmatch 
+
+" 匹配括号高亮的时间（单位是十分之一秒） 
+set matchtime=5 
+
+" 在搜索的时候忽略大小写 
+set ignorecase 
+
+" 不要高亮被搜索的句子（phrases） 
+set nohlsearch 
+
+" 在搜索时，输入的词句的逐字符高亮（类似firefox的搜索） 
+set incsearch
+
+" 光标移动到buffer的顶部和底部时保持3行距离 
+set scrolloff=3 
+
+" 不要闪烁 
+set novisualbell
+
+" 总是显示状态行 
+set laststatus=2
+
+" 继承前一行的缩进方式，特别适用于多行注释 
+set autoindent
+
+" 我的状态行显示的内容（包括文件类型和解码） 
+set statusline=%F%m%r%h%w\[POS=%l,%v][%p%%]\%{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+" 高亮颜色 
+highlight StatusLine guifg=SlateBlue guibg=Yellow 
+highlight StatusLineNC guifg=Gray guibg=White
