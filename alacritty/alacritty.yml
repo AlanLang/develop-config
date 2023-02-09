@@ -3,6 +3,13 @@ live_config_reload: true
 env:
   TERM: xterm-256color
 
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - 'tmux attach || tmux'
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: true
@@ -98,3 +105,66 @@ colors:
     magenta: '#c593c4'
     cyan: '#5fb2b2'
     white: '#fffefe'
+
+key_bindings:
+# ----- new pane/tab/window -----
+  - { key: D,        mods: Command,       chars: "\x02\x25"   } # 横向分割窗口
+  - { key: D,        mods: Command|Shift, chars: "\x02\x22"    } # 纵向分割窗口
+  - { key: T,        mods: Command,       chars: "\x02\x63"    } # 创建新标签页
+  - { key: T,        mods: Command|Shift, chars: "\x02\x21"    } # 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板
+  - { key: X,        mods: Command, chars: "\x02\x78" } # 关闭当前面板
+  - { key: Comma,    mods: Command, chars: "\x02," }  # 重命名当前窗口
+  - { key: P,    mods: Command, chars: "\x02s" }  # 选择并切换会话；在同时开启了多个会话时使用
+  - { key: N,    mods: Command, chars: "\x02n" }  # 切换到上一个窗口
+  - { key: B,    mods: Command, chars: "\x02p" }  # 切换到下一个窗口
+
+  # Select window 1-9
+  - { key: Key1, mods: Command, chars: "\x02\x31" }
+  - { key: Key2, mods: Command, chars: "\x02\x32" }
+  - { key: Key3, mods: Command, chars: "\x02\x33" }
+  - { key: Key4, mods: Command, chars: "\x02\x34" }
+  - { key: Key5, mods: Command, chars: "\x02\x35" }
+  - { key: Key6, mods: Command, chars: "\x02\x36" }
+  - { key: Key7, mods: Command, chars: "\x02\x37" }
+  - { key: Key8, mods: Command, chars: "\x02\x38" }
+  - { key: Key9, mods: Command, chars: "\x02\x39" }
+  - { key: Key0, mods: Command, chars: "\x02\x30" }
+
+  # ----- close pane/tab/window -----
+  - { key: W,        mods: Command,       chars: "\x02x"    } # close the pane
+  - { key: W,        mods: Command|Shift, chars: "\x02&"    } # close the tab
+  - { key: Q,        mods: Command,       chars: "\x02d"    } # close the window
+
+  # ----- copy mode -----
+  - { key: F,        mods: Command,       chars: "\x02[/"   } # enter vi copy mode, and search from up to down
+  - { key: F,        mods: Command|Shift, chars: "\x02[?"   } # enter vi copy mode, search from down to up
+
+  # ----- misc shortcuts -----
+  - { key: I,        mods: Command,       chars: "\x02:"    } # input tmux command
+  - { key: I,        mods: Command|Shift, chars: "\x02I"    } # synchronize panes in the current window
+  - { key: R,        mods: Command,       chars: "\x02R"    } # run command with commands menu
+  - { key: Z,        mods: Command,       chars: "\x02z"    } # zoom toggle of the current pane.
+  - { key: Z,        mods: Command|Shift, chars: "\x02 "    } # retile panes in the current window with preset layouts
+  - { key: Comma,    mods: Command,       chars: "\x02,"    } # rename tab
+  - { key: S,        mods: Command,       chars: "\x1b:w\x0a"} # Type <escape>:w<enter> to save vim
+
+  # ----- navigate panes -----
+  - { key: H,        mods: Command,       chars: "\x02h"    } # go to the pane left
+  - { key: J,        mods: Command,       chars: "\x02j"    } # go to the pane above
+  - { key: K,        mods: Command,       chars: "\x02k"    } # go to the pane below
+  - { key: L,        mods: Command,       chars: "\x02l"    } # go to the pane right
+  - { key: Left,     mods: Command,       chars: "\x02h"    }
+  - { key: Down,     mods: Command,       chars: "\x02j"    }
+  - { key: Up,       mods: Command,       chars: "\x02k"    }
+  - { key: Right,    mods: Command,       chars: "\x02l"    }
+
+  # ----- resize panes -----
+  - { key: H,        mods: Command|Shift, chars: "\x02H"    } # resize the current pane left
+  - { key: J,        mods: Command|Shift, chars: "\x02J"    } # resize the current pane above
+  - { key: K,        mods: Command|Shift, chars: "\x02K"    } # resize the current pane below
+  - { key: L,        mods: Command|Shift, chars: "\x02L"    } # resize the current pane right
+  - { key: Left,     mods: Command|Shift, chars: "\x02H"    }
+  - { key: Down,     mods: Command|Shift, chars: "\x02J"    }
+  - { key: Up,       mods: Command|Shift, chars: "\x02K"    }
+  - { key: Right,    mods: Command|Shift, chars: "\x02L"    }
+
