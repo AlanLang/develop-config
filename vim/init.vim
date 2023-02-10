@@ -67,6 +67,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 hi Comment ctermfg=Darkgray cterm=none
 " 常量 Constant
 hi Constant ctermfg=Green cterm=none
+hi Statement ctermfg=Blue cterm=none
 
 " 关键字颜色 Statement
 " 变量名颜色 Identifier
