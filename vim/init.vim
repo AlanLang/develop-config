@@ -60,3 +60,18 @@ set statusline=%F%m%r%h%w\[POS=%l,%v][%p%%]\%{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 " 高亮颜色 
 highlight StatusLine guifg=SlateBlue guibg=Yellow 
 highlight StatusLineNC guifg=Gray guibg=White
+" 行号颜色
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" 注释颜色 Comment
+hi Comment ctermfg=Darkgray cterm=none
+" 常量 Constant
+hi Constant ctermfg=Green cterm=none
+
+" 关键字颜色 Statement
+" 变量名颜色 Identifier
+" 类型名颜色 Type
+" 预处理语句 PreProc
+" 特殊符号 Special
+" 未定义的 Underlined
+" 错误 Error
