@@ -186,7 +186,7 @@
       "commands": [
         "workbench.action.closeOtherEditors"
       ],
-      // "silent": true 
+      "silent": true 
     },
     {
       "before": ["leader", "f"],
