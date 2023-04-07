@@ -182,11 +182,29 @@
   ],
   "vim.normalModeKeyBindings": [
     {
+      "before": ["leader", "t"],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ],
+      // "silent": true 
+    },
+    {
       "before": ["leader", "f"],
       "commands": [
         "workbench.action.gotoSymbol"
       ],
       "silent": true 
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },{
+      "before": ["leader", "h"],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
     },{
       "before": ["leader", "p"],
       "commands": [
@@ -195,9 +213,6 @@
       "silent": true 
     },
     {
-      "before": ["<Leader>", "h"],
-      "commands": [":registers"]
-    },{
       "before": ["leader", "r"],
       "commands": [
         "editor.action.rename"
