@@ -189,6 +189,13 @@
       "silent": true 
     },
     {
+      "before": ["leader", "g"],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+      "silent": true 
+    },
+    {
       "before": ["leader", "f"],
       "commands": [
         "workbench.action.gotoSymbol"
