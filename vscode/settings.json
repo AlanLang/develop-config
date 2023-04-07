@@ -1,11 +1,13 @@
 {
+  // Visuals
   "workbench.colorTheme": "Ocean",
   "workbench.preferredDarkColorTheme": "Ocean",
   "workbench.preferredLightColorTheme": "Ocean",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.iconTheme": "file-icons",
   "workbench.fontAliasing": "antialiased",
-  "editor.fontFamily": "'Fira Code', 'Monaco NF', 'Menlo', 'DejaVu Sans Mono', 'Lucida Console', monospace",
+  // Editor
+  "editor.fontFamily": "'Fira Code', 'Monaco', 'Menlo', 'DejaVu Sans Mono', 'Lucida Console', monospace",
   "editor.fontSize": 14,
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
   "editor.accessibilitySupport": "off",
@@ -15,7 +17,6 @@
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "on",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renderWhitespace": "boundary",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": false,
@@ -30,8 +31,11 @@
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "editor.smoothScrolling": true,
+  // Window
   "window.autoDetectColorScheme": true,
   "window.dialogStyle": "custom",
+  // "window.nativeTabs": true, // this is great, macOS only
   "window.titleBarStyle": "custom",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
@@ -53,7 +57,6 @@
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
@@ -156,5 +159,108 @@
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "git.openRepositoryInParentFolders": "never"
+  "beancount.mainBeanFile": "main.bean",
+  "git.openRepositoryInParentFolders": "never",
+  // 完全开启/关闭 AutoCorrect，默认：true
+  "autocorrect.enable": false,
+  // 开启/关闭 AutoCorrect Lint 检查，默认：true
+  "autocorrect.enableLint": true,
+  // 是否启用 formatOnSave，默认：true
+  "autocorrect.formatOnSave": true,
+  "vim.leader": "<space>",
+  "vim.autoSwitchInputMethod.enable": true,
+  // 退出编辑模式时，切换输入法为英文
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["leader", "f"],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ],
+      "silent": true 
+    },{
+      "before": ["leader", "p"],
+      "commands": [
+        "workbench.action.showCommands"
+      ],
+      "silent": true 
+    },
+    {
+      "before": ["<Leader>", "h"],
+      "commands": [":registers"]
+    },{
+      "before": ["leader", "r"],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": [
+          "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": [
+          "bookmarks.list"
+      ]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": [
+          "workbench.action.files.save"
+      ]
+    },{
+        "before": ["leader", "j"],
+        "commands": [
+            "extension.runJest"
+        ]
+    },{
+        "before": ["{"],
+        "after": ["[", "{"]
+    }, {
+        "before": ["}"],
+        "after": ["]", "}"]
+    }, {
+        "before": ["("],
+        "after": ["[", "("]
+    }, {
+        "before": [")"],
+        "after": ["]", ")"]
+    },{
+      "before": ["<Leader>", "d"],
+      "after": ["leader", "leader", "s"]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+          "p",
+      ],
+      "after": [
+          "p",
+          "g",
+          "v",
+          "y"
+      ]
+    }
+  ],
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "12345qwertasdfuiojklvnm",
+  "vim.camelCaseMotion.enable": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "error"
+  ],
+  "editor.renderWhitespace": "boundary",
+  "errorLens.onSave": true
 }

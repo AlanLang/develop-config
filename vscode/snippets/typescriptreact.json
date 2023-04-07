@@ -1,0 +1,9 @@
+{
+	"create a func": {
+		"prefix": "func",
+		"body": [
+			"($1) => {$2}"
+		],
+		"description": "create a func"
+	}
+}
