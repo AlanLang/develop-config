@@ -182,7 +182,13 @@
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["leader", "t"],
+      "before": ["leader", "c", "o"],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ],
+      "silent": true 
+    },{
+      "before": ["leader", "c", "a"],
       "commands": [
         "workbench.action.closeOtherEditors"
       ],
@@ -249,7 +255,7 @@
           "workbench.action.files.save"
       ]
     },{
-        "before": ["leader", "s"],
+        "before": ["leader", "t"],
         "commands": [
             "extension.runJest"
         ]
