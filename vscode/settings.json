@@ -262,6 +262,12 @@
     },{
       "before": ["<Leader>", "d"],
       "after": ["leader", "leader", "s"]
+    },{
+      "before": ["<Leader>", "k"],
+      "after": ["C-u"]
+    },{
+      "before": ["<Leader>", "j"],
+      "after": ["C-d"]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
