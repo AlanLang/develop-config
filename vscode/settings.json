@@ -220,9 +220,15 @@
       "silent": true 
     },
     {
-      "before": ["leader", "r"],
+      "before": ["leader", "r", "n"],
       "commands": [
         "editor.action.rename"
+      ]
+    },
+    {
+      "before": ["leader", "r", "e"],
+      "commands": [
+        "editor.action.refactor"
       ]
     },
     {
