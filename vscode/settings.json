@@ -174,7 +174,8 @@
   "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
   "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
   "vim.useSystemClipboard": true,
-  "vim.sneak": true,
+  "vim.sneak": false,
+  "vim.sneakUseIgnorecaseAndSmartcase": false,
   "vim.visualModeKeyBindings": [
     {
       "before": ["leader", "r", "e"],
@@ -187,9 +188,34 @@
     {
         "before": ["j", "j"],
         "after": ["<Esc>"]
-    }
+    },
+    {
+      "before": ["J"],
+      "after": ["9", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["9", "k"]
+    },
   ],
   "vim.normalModeKeyBindings": [
+    {
+      "before": ["J"],
+      "after": ["9", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["9", "k"]
+    },
+    {
+      
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
     {
       "before": ["leader", "c", "o"],
       "commands": [
