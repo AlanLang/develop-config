@@ -183,11 +183,14 @@
         "editor.action.refactor"
       ]
     },
-  ],
-  "vim.insertModeKeyBindings": [
     {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
+      
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
     },
     {
       "before": ["J"],
@@ -196,6 +199,13 @@
     {
       "before": ["K"],
       "after": ["9", "k"]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     },
   ],
   "vim.normalModeKeyBindings": [
