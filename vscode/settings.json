@@ -235,7 +235,7 @@
     },{
       "before": ["leader", "c", "a"],
       "commands": [
-        "workbench.action.closeOtherEditors"
+        "workbench.action.closeEditorsInGroup"
       ],
       "silent": true 
     },
