@@ -12,6 +12,7 @@
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
   "editor.accessibilitySupport": "off",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
   "editor.find.addExtraSpaceOnTop": false,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
@@ -350,5 +351,9 @@
     "error"
   ],
   "editor.renderWhitespace": "boundary",
-  "errorLens.onSave": true
+  "errorLens.onSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "errorLens.excludeBySource": [
+    "ts(2425)"
+  ]
 }
