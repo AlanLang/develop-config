@@ -15,16 +15,9 @@ selection:
   save_to_clipboard: true
 
 window:
-  dimensions:
-   columns: 200
-   lines: 45
-  opacity: 0.85
-  padding:
-    x: 6
-    y: 6
+  startup_mode: SimpleFullscreen
+  decorations: none
   opacity: 0.8
-  dynamic_padding: false
-  decorations: buttonless
 
 font:
   normal:
