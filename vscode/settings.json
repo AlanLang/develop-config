@@ -318,7 +318,7 @@
         "before": [")"],
         "after": ["]", ")"]
     },{
-      "before": ["<Leader>", "f"],
+      "before": ["s"],
       "after": ["leader", "leader", "s"]
     },{
       "before": ["<Leader>", "F"],
@@ -329,7 +329,12 @@
     },{
       "before": ["<Leader>", "j"],
       "after": ["C-d"]
-    },
+    },{
+      "before": ["<Leader>", "o"],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
