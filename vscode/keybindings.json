@@ -29,10 +29,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "cmd+d",
-        "command": "workbench.action.splitEditor"
-    },
-    {
         "key": "cmd+\\",
         "command": "-workbench.action.splitEditor"
     },
