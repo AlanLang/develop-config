@@ -366,6 +366,9 @@
     },{
       "before": ["<Leader>", "N"],
       "commands": ["workbench.action.evenEditorWidths"]
+    },{
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.view.explorer"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
