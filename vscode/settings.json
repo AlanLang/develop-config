@@ -323,13 +323,54 @@
       "before": ["<Leader>", "j"],
       "after": ["C-d"]
     },{
+      "before": ["<Leader>", "o"],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },{
       "before": ["<Leader>", "a"],
-      "after": ["C-o"]
+      "commands": ["workbench.action.navigateBack"]
+    },{
+      "before": ["<Leader>", "z"],
+      "commands": ["workbench.action.navigateForward"]
+    },{
+      "before": ["<Leader>", "s"],
+      "commands": ["workbench.action.files.save"]
+    },{
+      "before": ["<Leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },{
+      "before": ["<Leader>", "q"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },{
+      "before": ["<Leader>", "Q"],
+      "commands": ["workbench.action.reopenClosedEditor"]
+    },{
+      "before": ["<Leader>", "d"],
+      "commands": ["workbench.action.splitEditor"]
+    },{
+      "before": ["<Leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },{
+      "before": ["<Leader>", "j"],
+      "commands": ["workbench.action.focusNextGroup"]
+    },{
+      "before": ["<Leader>", "k"],
+      "commands": ["workbench.action.focusPreviousGroup"]
+    },{
+      "before": ["<Leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },{
+      "before": ["<Leader>", "n"],
+      "commands": ["workbench.action.maximizeEditor"]
+    },{
+      "before": ["<Leader>", "N"],
+      "commands": ["workbench.action.evenEditorWidths"]
     },{
       "before": ["<Leader>", "e"],
-      "after": ["C-i"]
-    } 
-   ],
+      "commands": ["workbench.view.explorer"]
+    }
+  ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -369,6 +410,9 @@
   "errorLens.onSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "errorLens.excludeBySource": [
-    "ts(2339)"
-  ]
+    "ts(2425)"
+  ],
+  "vim.leap.enable": true,
+  "vim.leap.bidirectionalSearch": true,
+  "vim.leap.caseSensitive": false
 }
