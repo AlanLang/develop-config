@@ -411,5 +411,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "errorLens.excludeBySource": [
     "ts(2425)"
-  ]
+  ],
+  "vim.leap.enable": true,
+  "vim.leap.bidirectionalSearch": true,
+  "vim.leap.caseSensitive": false
 }
